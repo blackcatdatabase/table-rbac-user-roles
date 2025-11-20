@@ -1,21 +1,4 @@
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
--- engine: mysql
--- table:  rbac_user_roles
--- Contract view for [rbac_user_roles]
-CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_rbac_user_roles AS
-SELECT
-  id,
-  user_id,
-  role_id,
-  tenant_id,
-  scope,
-  status,
-  granted_by,
-  granted_at,
-  expires_at
-FROM rbac_user_roles;
-
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  rbac_user_roles_expiring_assignments
 -- Roles/permissions which will expire within 7 days
@@ -41,4 +24,21 @@ SELECT
 FROM rbac_user_permissions up
 WHERE up.expires_at IS NOT NULL
   AND up.expires_at <= NOW() + INTERVAL 7 DAY;
+
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
+-- engine: mysql
+-- table:  rbac_user_roles
+-- Contract view for [rbac_user_roles]
+CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_rbac_user_roles AS
+SELECT
+  id,
+  user_id,
+  role_id,
+  tenant_id,
+  scope,
+  status,
+  granted_by,
+  granted_at,
+  expires_at
+FROM rbac_user_roles;
 

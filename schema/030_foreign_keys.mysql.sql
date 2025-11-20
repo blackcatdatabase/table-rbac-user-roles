@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.psd1 (map@734a489)
+-- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  rbac_user_roles
 ALTER TABLE rbac_user_roles ADD CONSTRAINT fk_rbac_ur_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;

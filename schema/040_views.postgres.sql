@@ -1,13 +1,4 @@
--- Auto-generated from schema-views-postgres.psd1 (map@9d3471b)
--- engine: postgres
--- table:  rbac_user_roles
--- Contract view for [rbac_user_roles]
-CREATE OR REPLACE VIEW vw_rbac_user_roles AS
-SELECT
-  id, user_id, role_id, tenant_id, scope, status, granted_by, granted_at, expires_at
-FROM rbac_user_roles;
-
--- Auto-generated from schema-views-postgres.psd1 (map@9d3471b)
+-- Auto-generated from schema-views-postgres.psd1 (map@62c9c93)
 -- engine: postgres
 -- table:  rbac_user_roles_expiring_assignments
 -- Roles/permissions which will expire within 7 days
@@ -29,4 +20,13 @@ SELECT
   up.expires_at
 FROM rbac_user_permissions up
 WHERE up.expires_at IS NOT NULL AND up.expires_at <= now() + interval ''7 days'';
+
+-- Auto-generated from schema-views-postgres.psd1 (map@62c9c93)
+-- engine: postgres
+-- table:  rbac_user_roles
+-- Contract view for [rbac_user_roles]
+CREATE OR REPLACE VIEW vw_rbac_user_roles AS
+SELECT
+  id, user_id, role_id, tenant_id, scope, status, granted_by, granted_at, expires_at
+FROM rbac_user_roles;
 
