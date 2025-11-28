@@ -1,0 +1,12 @@
+-- Auto-generated from feature-modules-mysql.psd1 (map@mtime:2025-11-26T18:45:53Z)
+-- engine: mysql
+-- table:  rbac_user_roles_expiring_assignments
+CREATE OR REPLACE ALGORITHM=TEMPTABLE SQL SECURITY INVOKER VIEW vw_rbac_user_roles_expiring_assignments AS
+SELECT
+  ur.user_id,
+  ur.role_id,
+  ur.expires_at,
+  ur.status
+FROM rbac_user_roles ur
+WHERE ur.expires_at IS NOT NULL
+  AND ur.expires_at <= DATE_ADD(NOW(), INTERVAL 30 DAY);

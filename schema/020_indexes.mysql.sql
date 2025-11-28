@@ -1,6 +1,7 @@
--- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
+-- Auto-generated from schema-map-mysql.psd1 (map@mtime:2025-11-27T15:13:14Z)
 -- engine: mysql
 -- table:  rbac_user_roles
+
 CREATE INDEX idx_rbac_user_roles_user ON rbac_user_roles (user_id);
 
 CREATE INDEX idx_rbac_user_roles_role ON rbac_user_roles (role_id);

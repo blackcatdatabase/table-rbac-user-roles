@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class RbacUserRoleDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'user_id' => 'userId', 'role_id' => 'roleId', 'tenant_id' => 'tenantId', 'granted_by' => 'grantedBy', 'granted_at' => 'grantedAt', 'expires_at' => 'expiresAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'user_id' => 'userId', 'role_id' => 'roleId', 'tenant_id' => 'tenantId', 'scope' => 'scope', 'status' => 'status', 'granted_by' => 'grantedBy', 'granted_at' => 'grantedAt', 'expires_at' => 'expiresAt' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
