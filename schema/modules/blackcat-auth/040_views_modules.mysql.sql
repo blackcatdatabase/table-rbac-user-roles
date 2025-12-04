@@ -1,4 +1,4 @@
--- Auto-generated from feature-modules-mysql.yaml (map@94ebe6c)
+-- Auto-generated from feature-modules-mysql.yaml (map@85230ed)
 -- engine: mysql
 -- table:  rbac_user_roles_expiring_assignments
 
