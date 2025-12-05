@@ -1,4 +1,4 @@
--- Auto-generated from feature-modules-postgres.yaml (map@85230ed)
+-- Auto-generated from feature-modules-postgres.yaml (map@sha1:E21F17850CEF9511C760F725ABF4C7D45DC351E4)
 -- engine: postgres
 -- table:  rbac_user_roles_expiring_assignments
 
