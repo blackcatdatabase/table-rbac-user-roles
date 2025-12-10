@@ -5,15 +5,15 @@ Assignments of RBAC roles to users.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| expires_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Optional expiration time (UTC). |
-| granted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Grant timestamp (UTC). |
-| granted_by | BIGINT | YES |  | User/admin who granted the role. |
 | id | BIGINT | NO |  | Surrogate primary key. |
+| user_id | BIGINT | NO |  | User receiving the role (FK users.id). |
 | role_id | BIGINT | NO |  | Role granted (FK rbac_roles.id). |
+| tenant_id | BIGINT | YES |  | Tenant scope, optional. |
 | scope | VARCHAR(120) | YES |  | Additional scope qualifier. |
 | status | mysql: ENUM('active','revoked','expired') / postgres: TEXT | NO | active | Assignment status. (enum: active, revoked, expired) |
-| tenant_id | BIGINT | YES |  | Tenant scope, optional. |
-| user_id | BIGINT | NO |  | User receiving the role (FK users.id). |
+| granted_by | BIGINT | YES |  | User/admin who granted the role. |
+| granted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Grant timestamp (UTC). |
+| expires_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Optional expiration time (UTC). |
 
 ## Engine Details
 
