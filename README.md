@@ -100,8 +100,8 @@ graph LR
 _No engine differences detected._
 
 ## Constraints Snapshot
-- `granted_at` – default=CURRENT_TIMESTAMP(6)
 - `status` – default=active, enum
+- `granted_at` – default=CURRENT_TIMESTAMP(6)
 
 ## Schema Files
 | File | Engine |
