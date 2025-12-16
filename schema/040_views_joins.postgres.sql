@@ -1,4 +1,4 @@
--- Auto-generated from joins-postgres.yaml (map@sha1:819A7F0638F1D5C0A86E37B6E574CC5689B6F3EE)
+-- Auto-generated from auth-rbac\joins-postgres.yaml (map@sha1:819A7F0638F1D5C0A86E37B6E574CC5689B6F3EE)
 -- engine: postgres
 -- view:   rbac_user_roles_permissions
 
@@ -23,7 +23,7 @@ LEFT JOIN active_roles ar ON ar.user_id = u.id
 LEFT JOIN role_perms rp   ON rp.user_id = u.id
 GROUP BY u.id;
 
--- Auto-generated from joins-postgres.yaml (map@sha1:29CF395A3A4C8964482083733F8E613ABFBEF5CC)
+-- Auto-generated from core\joins-postgres.yaml (map@sha1:29CF395A3A4C8964482083733F8E613ABFBEF5CC)
 -- engine: postgres
 -- view:   rbac_effective_permissions
 
