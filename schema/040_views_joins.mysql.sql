@@ -1,4 +1,4 @@
--- Auto-generated from auth-rbac\joins-mysql.yaml (map@sha1:EE82A7850EC6293657D1C6EF6C7ED287EDF31EB3)
+-- Auto-generated from auth-rbac/joins-mysql.yaml (map@sha1:EE82A7850EC6293657D1C6EF6C7ED287EDF31EB3)
 -- engine: mysql
 -- view:   rbac_user_roles_permissions
 
@@ -24,7 +24,7 @@ LEFT JOIN active_roles ar ON ar.user_id = u.id
 LEFT JOIN role_perms rp   ON rp.user_id = u.id
 GROUP BY u.id;
 
--- Auto-generated from core\joins-mysql.yaml (map@sha1:DA70105A5B799F72A56FEAB71A5171F946A770D2)
+-- Auto-generated from core/joins-mysql.yaml (map@sha1:DA70105A5B799F72A56FEAB71A5171F946A770D2)
 -- engine: mysql
 -- view:   rbac_effective_permissions
 
