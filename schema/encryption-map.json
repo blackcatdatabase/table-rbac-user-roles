@@ -1,0 +1,35 @@
+{
+  "tables": {
+    "rbac_user_roles": {
+      "columns": {
+        "expires_at": {
+          "strategy": "passthrough"
+        },
+        "granted_at": {
+          "strategy": "passthrough"
+        },
+        "granted_by": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "role_id": {
+          "strategy": "passthrough"
+        },
+        "scope": {
+          "strategy": "passthrough"
+        },
+        "status": {
+          "strategy": "passthrough"
+        },
+        "tenant_id": {
+          "strategy": "passthrough"
+        },
+        "user_id": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
